@@ -50,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                 child: TextButton(
                   onPressed: () {},
                   child: const Text(
-                    "LOGIN",
+                    "SIGN UP",
                     style: TextStyle(
                       color: Colors.white,
                       letterSpacing: 1.0,

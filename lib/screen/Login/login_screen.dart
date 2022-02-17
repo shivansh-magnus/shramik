@@ -3,6 +3,7 @@ import 'package:shramik/components/already_have_an_account_check.dart';
 import 'package:shramik/components/rounded_input_field.dart';
 import 'package:shramik/components/rounded_password_field.dart';
 import 'package:shramik/components/text_field_container.dart';
+import 'package:shramik/homepage/homepage.dart';
 import 'package:shramik/screen/Signup/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -46,7 +47,12 @@ class LoginScreen extends StatelessWidget {
               child: SizedBox(
                 width: size.width * 0.8,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Homepage();
+                    }));
+                  },
                   child: const Text(
                     "LOGIN",
                     style: TextStyle(
