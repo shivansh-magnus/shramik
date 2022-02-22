@@ -15,7 +15,8 @@ class _ChatBoxState extends State<ChatBox> {
   final messageController = TextEditingController();
   List<Map> messages = [];
   void response(query) async {
-    AuthGoogle authGoogle = await AuthGoogle(fileJson: "").build();
+    AuthGoogle authGoogle =
+        await AuthGoogle(fileJson: "assets/credentials.json").build();
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse aiResponse = await dialogflow.detectIntent(query);
@@ -76,7 +77,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Shramik Chat-BOt",
+          "Shramik Chat-Bot",
         ),
       ),
       body: Container(
