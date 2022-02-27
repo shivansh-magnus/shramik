@@ -22,12 +22,15 @@ class Homepage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           leading: Padding(
-            padding: EdgeInsets.only(left: size.width * 0.04),
+            padding: EdgeInsets.only(
+              left: size.width * 0.04,
+              bottom: size.height * 0.04,
+            ),
             child: const Icon(
               Icons.grid_view,
             ),
           ),
-          elevation: 0,
+          elevation: 0.1,
           actions: [
             IconButton(
               onPressed: () {},

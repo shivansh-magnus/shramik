@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shramik/components/chatbox.dart';
 import 'package:shramik/homepage/components/profile.dart';
+import 'package:shramik/homepage/components/jobs.dart';
 
 const primaryColor = Color(0xFFFDFDFD);
 const secondaryColor = Color(0xFF252525);
@@ -24,11 +25,8 @@ class Background extends StatelessWidget {
             ),
             Container(
               width: size.width,
-              height: size.height,
-              child: const SingleChildScrollView(
-                reverse: false,
-                child: Profile(),
-              ),
+              height: size.height * 0.5,
+              child: Profile(),
               decoration: const BoxDecoration(
                 color: primaryColor,
                 borderRadius: BorderRadius.only(
@@ -50,6 +48,9 @@ class Background extends StatelessWidget {
                 color: secondaryColor,
                 borderRadius: BorderRadius.only(topRight: Radius.circular(88))),
           ),
+          Container(
+            child: Jobs(),
+          )
         ]),
       )
     ]);
