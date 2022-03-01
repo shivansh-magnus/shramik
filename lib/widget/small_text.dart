@@ -9,10 +9,10 @@ class SmallText extends StatelessWidget {
       required this.text,
       this.size = 12,
       this.height = 1.2,
-      this.overflow = TextOverflow.ellipsis})
+      this.overflow = TextOverflow.clip})
       : super(key: key);
 
-  Color? color;
+  Color color;
   final String text;
   double size;
   double height;

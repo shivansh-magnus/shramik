@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shramik/components/already_have_an_account_check.dart';
 import 'package:shramik/components/rounded_input_field.dart';
 import 'package:shramik/components/rounded_password_field.dart';
-import 'package:shramik/components/text_field_container.dart';
 import 'package:shramik/homepage/homepage.dart';
 import 'package:shramik/screen/Signup/signup_screen.dart';
 
@@ -73,9 +72,14 @@ class LoginScreen extends StatelessWidget {
               height: size.height * 0.02,
             ),
             AlreadyHaveAccountCheck(press: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SignUpScreen();
-              }));
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignUpScreen();
+                  },
+                ),
+              );
             }),
           ],
         )),

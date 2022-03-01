@@ -39,6 +39,8 @@ dependencies:
   flutter_dialogflow:
   intl:
   dots_indicator: ^2.1.0
+  get:
+  neon:
 
 dev_dependencies:
   flutter_test:

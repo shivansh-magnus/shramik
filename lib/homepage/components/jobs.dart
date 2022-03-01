@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shramik/screen/Jobs/job.dart';
 import 'package:shramik/widget/big_text.dart';
 import 'package:shramik/widget/icon_and_text_widget.dart';
 import 'package:shramik/widget/small_text.dart';
@@ -45,8 +46,19 @@ class _JobsState extends State<Jobs> {
           // List of jobs with images
 
           Expanded(
-            child: Container(
-              child: ListView.builder(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return JobsDetail();
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                child: ListView.builder(
                   physics: AlwaysScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: 10,
@@ -62,7 +74,7 @@ class _JobsState extends State<Jobs> {
                           //Image in the row
                           Container(
                             width: 120,
-                            height: 120,
+                            height: 150,
                             decoration: BoxDecoration(
                               borderRadius:
                                   BorderRadius.circular(size.height * 0.02),
@@ -70,14 +82,16 @@ class _JobsState extends State<Jobs> {
                               image: const DecorationImage(
                                   fit: BoxFit.cover,
                                   image: AssetImage(
-                                    "assets/robot.png",
+                                    "assets/builder.png",
                                   )),
                             ),
                           ),
+
                           // Job Description Container
+
                           Expanded(
                             child: Container(
-                              height: 95,
+                              height: 130,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.only(
                                     topRight:
@@ -96,14 +110,14 @@ class _JobsState extends State<Jobs> {
                                       text: "Builder's Job",
                                     ),
                                     SizedBox(
-                                      height: size.height * 0.01,
+                                      height: size.height * 0.015,
                                     ),
                                     SmallText(
                                       text:
                                           "For 2 months period we require a builder who could complete the total job alone . All tools are provided",
                                     ),
                                     SizedBox(
-                                      height: size.height * 0.01,
+                                      height: size.height * 0.015,
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(
@@ -122,15 +136,15 @@ class _JobsState extends State<Jobs> {
                                           ),
                                           IconAndText(
                                             icon: Icons.location_on,
-                                            text: "1.7",
+                                            text: "1.7km",
                                             color: Colors.greenAccent,
                                             iconColor: Colors.greenAccent,
                                           ),
                                           IconAndText(
                                             icon: Icons.access_time_rounded,
                                             text: "32min",
-                                            color: Colors.orange,
-                                            iconColor: Colors.orange,
+                                            color: Colors.red,
+                                            iconColor: Colors.red,
                                           )
                                         ],
                                       ),
@@ -143,7 +157,9 @@ class _JobsState extends State<Jobs> {
                         ],
                       ),
                     );
-                  }),
+                  },
+                ),
+              ),
             ),
           )
         ],

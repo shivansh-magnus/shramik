@@ -3,6 +3,7 @@ import 'package:shramik/widget/small_text.dart';
 
 class IconAndText extends StatelessWidget {
   final IconData icon;
+  final double size;
   final String text;
   final Color color;
   final Color iconColor;
@@ -12,6 +13,7 @@ class IconAndText extends StatelessWidget {
     required this.text,
     required this.color,
     required this.iconColor,
+    this.size = 10,
   }) : super(key: key);
 
   @override
@@ -28,6 +30,7 @@ class IconAndText extends StatelessWidget {
         SmallText(
           color: color,
           text: text,
+          size: size,
         )
       ],
     );
