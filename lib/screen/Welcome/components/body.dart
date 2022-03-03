@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shramik/screen/Login/login_screen.dart';
+import 'package:shramik/screen/Login/login_screen_new.dart';
+import 'package:shramik/screen/Signup/sign_up_new.dart';
 import 'package:shramik/screen/Signup/signup_screen.dart';
 import 'package:shramik/screen/Welcome/components/background.dart';
 
@@ -62,7 +63,7 @@ class Body extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return SignUpScreen();
+                      return SignUpPage();
                     }));
                   },
                   child: const Text(

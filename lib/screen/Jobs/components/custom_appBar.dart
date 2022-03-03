@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shramik/components/app_icon.dart';
-import 'package:shramik/homepage/homepage.dart';
 
 class custom_AppBar extends StatelessWidget {
   const custom_AppBar({Key? key}) : super(key: key);
@@ -20,7 +18,7 @@ class custom_AppBar extends StatelessWidget {
             height: size.height * 0.05,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(size.height * 0.05 / 2),
-              color: Color(0xFFfcf4e4),
+              color: const Color(0xFFfcf4e4),
             ),
             child: GestureDetector(
               onTap: () {
@@ -28,7 +26,7 @@ class custom_AppBar extends StatelessWidget {
               },
               child: Icon(
                 Icons.arrow_back_ios_new,
-                color: Color(0xFF756d54),
+                color: const Color(0xFF756d54),
                 size: size.height * 0.04,
               ),
             ),
