@@ -41,6 +41,7 @@ dependencies:
   dots_indicator: ^2.1.0
   get:
   neon:
+  font_awesome_flutter:
 
 dev_dependencies:
   flutter_test:

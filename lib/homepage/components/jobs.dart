@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shramik/screen/Filter/filterpage.dart';
 import 'package:shramik/screen/Jobs/job.dart';
 import 'package:shramik/widget/big_text.dart';
 import 'package:shramik/widget/icon_and_text_widget.dart';
@@ -31,7 +32,16 @@ class _JobsState extends State<Jobs> {
               ),
               SizedBox(width: size.width * 0.5),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return FilterChipDisplay();
+                      },
+                    ),
+                  );
+                },
                 child: const Text(
                   "Filter",
                   style: TextStyle(color: Colors.black),

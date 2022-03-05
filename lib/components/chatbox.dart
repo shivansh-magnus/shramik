@@ -20,12 +20,18 @@ class _ChatBoxState extends State<ChatBox> {
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse aiResponse = await dialogflow.detectIntent(query);
-    setState(() {
-      messages.insert(0, {
-        "data": 0,
-        "messages": aiResponse.getListMessage()[0]["Text"]["text"][0].toString()
-      });
-    });
+    setState(
+      () {
+        messages.insert(
+          0,
+          {
+            "data": 0,
+            "messages":
+                aiResponse.getListMessage()[0]["Text"]["text"][0].toString()
+          },
+        );
+      },
+    );
   }
 
   @override
@@ -59,12 +65,18 @@ class _ChatBotPageState extends State<ChatBotPage> {
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse aiResponse = await dialogflow.detectIntent(query);
-    setState(() {
-      messsages.insert(0, {
-        "data": 0,
-        "message": aiResponse.getListMessage()[0]["text"]["text"][0].toString()
-      });
-    });
+    setState(
+      () {
+        messsages.insert(
+          0,
+          {
+            "data": 0,
+            "message":
+                aiResponse.getListMessage()[0]["text"]["text"][0].toString()
+          },
+        );
+      },
+    );
 
     print(aiResponse.getListMessage()[0]["text"]["text"][0].toString());
   }
