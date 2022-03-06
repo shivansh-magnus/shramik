@@ -77,10 +77,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: size.width * 0.8,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return const Homepage();
-                          }));
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const Homepage();
+                              },
+                            ),
+                          );
                         },
                         child: const Text(
                           "LOGIN",
@@ -146,8 +150,8 @@ class _AnimatedImageState extends State<AnimatedImage>
 
   @override
   void dispose() {
-    super.dispose();
     _controller.dispose();
+    super.dispose();
   }
 
   @override

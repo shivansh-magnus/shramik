@@ -19,9 +19,10 @@ class MyApp extends StatelessWidget {
     Get.find<PopularJobController>().getPopularJobList();
     return MaterialApp(
       title: 'Shramik',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.black,
       ),
       home: WelcomeScreen(),
     );

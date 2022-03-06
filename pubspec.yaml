@@ -42,6 +42,11 @@ dependencies:
   get:
   neon:
   font_awesome_flutter:
+  dio:
+  flutter_polyline_points:
+  google_maps_flutter:
+  location:
+  geolocator:
 
 dev_dependencies:
   flutter_test:
