@@ -9,7 +9,7 @@ class ApiClient extends GetConnect implements GetxService {
 
   ApiClient({required this.appBaseUrl}) {
     baseUrl = appBaseUrl;
-    timeout = Duration(seconds: 30);
+    timeout = const Duration(seconds: 30);
     _mainHeaders = {
       'Content-type': 'application/json; charset=UTF-8',
       'authorization': 'Bearer $token',

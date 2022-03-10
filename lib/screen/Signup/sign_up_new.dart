@@ -4,6 +4,7 @@ import 'package:shramik/components/already_have_an_account_check.dart';
 import 'package:shramik/components/rounded_input_field.dart';
 import 'package:shramik/components/rounded_password_field.dart';
 import 'package:shramik/screen/Login/login_screen_new.dart';
+import 'package:shramik/screen/Signup/signup_form.dart';
 
 import 'components/or_divider.dart';
 
@@ -77,7 +78,12 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: SizedBox(
                   width: size.width * 0.8,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const SignUpForm();
+                      }));
+                    },
                     child: const Text(
                       "SIGN UP",
                       style: TextStyle(
