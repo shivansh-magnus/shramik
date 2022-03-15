@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shramik/components/already_have_an_account_check.dart';
 import 'package:shramik/components/rounded_input_field.dart';
 import 'package:shramik/components/rounded_password_field.dart';
+import 'package:shramik/components/rounded_passwordconfirm_field.dart';
 import 'package:shramik/screen/Login/login_screen_new.dart';
 import 'package:shramik/screen/Signup/signup_form.dart';
 
@@ -57,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
               SizedBox(
-                height: size.height * 0.08,
+                height: size.height * 0.05,
               ),
               RoundedInputField(
                 hintText: "Your Email",
@@ -65,13 +66,19 @@ class _SignUpPageState extends State<SignUpPage> {
                 onChanged: (value) {},
               ),
               SizedBox(
-                height: size.height * 0.02,
+                height: size.height * 0.015,
               ),
               RoundedPasswordField(
                 onChanged: (value) {},
               ),
               SizedBox(
-                height: size.height * 0.02,
+                height: size.height * 0.015,
+              ),
+              RoundedPasswordConfirmField(
+                onChanged: (value) {},
+              ),
+              SizedBox(
+                height: size.height * 0.015,
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
